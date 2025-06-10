@@ -98,6 +98,8 @@ env:
     AUTH_SERVICE:
   field: {}
     # POD_IP: status.podIP
+  resourcefield: {}
+    # MY_CPU_REQUEST: requests.cpu
   secret:
     # username for basic http authentication
     BASIC_AUTH_USER:
