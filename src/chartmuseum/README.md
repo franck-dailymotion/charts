@@ -158,6 +158,7 @@ their default values. See values.yaml for all available options.
 | `env.open.AUTH_REALM`                   | Realm used for bearer authentication                                        | `<nil>`                              |
 | `env.open.AUTH_SERVICE`                 | Service used for bearer authentication                                      | `<nil>`                              |
 | `env.field`                             | Expose pod information to containers through environment variables          | `{}`                                 |
+| `env.resourcefield`                     | Expose information about resource containers through environment variables  | `{}`                                 |
 | `env.existingSecret`                    | Name of the existing secret use values                                      | `<nil>`                              |
 | `env.existingSecretMappings.BASIC_AUTH_USER`         | Key name in the secret for the Username                        | `<nil>`                              |
 | `env.existingSecretMappings.BASIC_AUTH_PASS`         | Key name in the secret for the Password                        | `<nil>`                              |
