@@ -77,6 +77,15 @@ spec:
               fieldPath: {{ $value | quote }}
 {{- end }}
 {{- end }}
+{{- range $name, $value := .Values.env.resourcefield }}
+{{- if not ( empty $value) }}
+        - name: {{ $name | quote }}
+          valueFrom:
+            resourceFieldRef:
+              containerName: {{ .Chart.Name }}
+              resource: {{ $value | quote }}
+{{- end }}
+{{- end }}
 {{- if .Values.gcp.secret.enabled }}
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: "/etc/secrets/google/credentials.json"
